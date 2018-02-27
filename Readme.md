@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Елена Сурьян](https://up.htmlacademy.ru/htmlcss/20/user/441009).
-* Наставник: `Неизвестно`.
+* Наставник: [Шамиль Алисултанов] (https://htmlacademy.ru/profile/adrenaline).
+
 
 ---
 
