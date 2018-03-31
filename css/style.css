@@ -89,6 +89,17 @@ body
     color: #000;
 }
 
+.main-navigation-link:hover {
+    color: #81b3d2;
+}
+
+.main-navigation-link:active {
+    color: #000;
+    opacity: 0.3;
+}
+
+
+
 /* header ends */
 
 /* content starts */
@@ -424,6 +435,18 @@ body
     color: #fff;
     border: none;
     background-color: #766357;
+    cursor: pointer;
+}
+
+.interested-btn:hover{
+    background-color: #604e43;
+    
+}
+
+.interested-btn:active {
+    background-color: #503e33;
+    color: rgba(255, 255, 255, .3);
+
 }
 
 .interested-form
@@ -466,14 +489,27 @@ body
 }
 
 .form-row-field {
-    height: 38px;
-    width:  346px;
+    height: 36px;
+    width:  344px;
     background-color: #f2f2f2;
     padding-left: 13px;
-    border: none;
+    border: 1px solid transparent ;
     font-size: 14px;
     line-height: 26px;
     color: #000;
+    outline: none;
+}
+
+.form-row-field:focus{
+    background-color: #ffffff;
+    border-color:  #e5e5e5;
+
+}
+
+.form-row-field:hover {
+    background-color: #ebebeb;
+    
+
 }
 
 .form-row-btn {
@@ -488,6 +524,18 @@ body
     background-position: center;
     border: none;
     
+}
+
+.form-row-btn:focus {
+    background-image: url(../img/icon/calendar-active.svg);
+}
+
+.form-row-btn:active{
+    background-image: url(../img/icon/calendar-active.svg);
+}
+
+.form-row-btn:hover {
+    background-image: url(../img/icon/calendar-hover.svg);
 }
 
 .adult {
@@ -505,14 +553,11 @@ body
     text-transform: uppercase;
 }
 
-.adult-counter {}
 
 .form-counter {
     font-size: 0;
     display: flex;
     align-items: stretch;
-
-
 }
 
 .form-counter-minus {
@@ -524,6 +569,14 @@ body
     background-image: url(../img/icon/icon-minus.png);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.form-counter-minus:active{
+    background-image: url(../img/icon/icon-minus-active.svg);
+}
+
+.form-counter-minus:hover {
+    background-image: url(../img/icon/icon-minus-hover.svg);
 }
 
 .form-counter-field {
@@ -549,11 +602,21 @@ body
     background-position: center;
 }
 
+.form-counter-plus:active{
+    background-image: url(../img/icon/icon-plus-active.svg);
+}
+
+.form-counter-plus:hover {
+    background-image: url(../img/icon/icon-plus-hover.svg);
+}
+
 .children {
     display: flex;
     align-items: center;
     
 }
+
+
 
 .children-label {
     width: 64px;
@@ -580,6 +643,15 @@ body
     margin-top: 26px;
     border: none;
 
+}
+
+.form-submit:hover {
+    background-color: #669ec0;
+}
+
+.form-submit:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, .3);
 }
 
 
@@ -1271,21 +1343,57 @@ body
     background-color: #81b3d2;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
 }
 
-.footer-social-link.tw
-{
+.footer-social-link:hover{
+    background-color: #669ec0;
+}
+
+.footer-social-link:hover::before{
+    opacity: .3;
+}
+
+
+.footer-social-link:active {
+    background-color: #5496bd;
+
+}
+
+.footer-social-link.tw::before
+{   content: "";
+    width: 17px;
+    height: 15px;
     background-image: url(../img/icon/twitter.svg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
 }
 
-.footer-social-link.fb
+
+.footer-social-link.fb::before
 {
     background-image: url(../img/icon/fb-icon.svg);
+    content: "";
+    width: 12px;
+    height: 22px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
 }
 
-.footer-social-link.yt
+.footer-social-link.yt::before
 {
     background-image: url(../img/icon/youtube.svg);
+    content: "";
+    width: 20px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
 }
 
 .htmlacademy
@@ -1305,6 +1413,22 @@ body
     text-transform: uppercase;
     margin-right: 6px;
     color: black;
+}
+
+.web-site-img {
+    background-image: url(../img/html-logo.svg);
+    background-repeat: no-repeat;
+    width: 115px;
+    height: 41px;
+}
+
+.web-site-img:hover{
+    background-image: url(../img/html-hover.svg);
+}
+
+
+.web-site-img:active{
+    background-image: url(../img/html-active.svg);
 }
 
 
