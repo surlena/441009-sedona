@@ -89,6 +89,10 @@ body
     color: #000;
 }
 
+.main-navigation-link.active { 
+    color: #d3cdcb;
+}
+
 .main-navigation-link:hover {
     color: #81b3d2;
 }
@@ -730,6 +734,15 @@ body
     background-image: url(../img/checkbox-on.svg);
 }
 
+.form-checkbox:disabled + .form-label::before {
+    background-image: url(../img/checkbox-off-disabled.svg);
+}
+
+.form-checkbox:checked:disabled + .form-label::before {
+    background-image: url(../img/checkbox-on-disabled.svg);
+
+}
+
 .form-label
 {
     position: relative;
@@ -1048,6 +1061,14 @@ body
     border-bottom: 1px dotted #81b3d2;
 }
 
+.sortable-link:hover {
+    color: #81b3d2;
+}
+
+.sortable-link:active {
+    color: #000;
+}
+
 .sortable-link-active
 {
     text-decoration: 1px dashed #81b3d2;
@@ -1081,6 +1102,7 @@ body
     height: 12px;
 }
 
+
 .sortable-up::before
 {
     position: absolute;
@@ -1090,7 +1112,7 @@ body
     width: 0;
     height: 0;
 
-    content: '';
+    content: "";
     cursor: pointer;
     transform: translateX(-50%) translateY(-50%);
 
@@ -1099,10 +1121,18 @@ body
     border-left: 6px solid transparent;
 }
 
-.sortable-up.active:before
-{
-    border-bottom-color: #81b3d2;
+.sortable-up:hover::before {
+    border-bottom: 10px solid #231f20;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
 }
+
+.sortable-up:active::before {
+    border-bottom: 10px solid #81b3d2;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+}
+
 
 .sortable-down
 {
@@ -1131,10 +1161,25 @@ body
     border-left: 6px solid transparent;
 }
 
-.sortable-down.active::before
-{
-    border-top-color: #81b3d2;
+.sortable-down:hover::before {
+    border-top: 10px solid #231f20;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
 }
+
+.sortable-down:active::before {
+    border-top: 10px solid #81b3d2;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+}
+
+.sortable-down.active::before {
+    border-top: 10px solid  #81b3d2;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+
+}
+
 
 
 
@@ -1204,6 +1249,14 @@ body
     color: #000;
 }
 
+.hotel-content-name a:hover {
+    color: #81b3d2;
+}
+
+.hotel-content-name a:active {
+    color: rgba(0, 0, 0, .3);
+}
+
 .hotel-content-middle
 {
     margin-bottom: 17px;
@@ -1248,13 +1301,30 @@ body
     background-color: #81b3d2;
 }
 
+.hotel-more-btn:hover {
+    background-color: #669ec0;
+
+}
+
+.hotel-more-btn:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, .3);
+}
+
 .hotel-content-btns .hotel-order-btn
 {
     font-size: 14px;
 
     background-color: #766357;
 }
+.hotel-order-btn:hover {
+    background-color: #604e43;
+}
 
+.hotel-order-btn:active {
+    background-color: #503e33;
+    color: rgba(255, 255, 255, .3);
+}
 
 
 .hotel-stars
@@ -1348,16 +1418,18 @@ body
 
 .footer-social-link:hover{
     background-color: #669ec0;
+    
 }
 
-.footer-social-link:hover::before{
+.footer-social-link:active::before{
     opacity: .3;
 }
 
 
 .footer-social-link:active {
     background-color: #5496bd;
-
+    
+    
 }
 
 .footer-social-link.tw::before
