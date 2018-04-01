@@ -277,6 +277,8 @@ body
 
     outline: 1px solid silver;
     background-color: #eee;
+    position: relative;
+    z-index: 3;
 }
 
 .services-second .services-title
@@ -388,10 +390,19 @@ body
 .interested
 {
     position: relative;
-
-    padding-top: 50px;
-
     outline: 1px solid orange;
+}
+
+.interested-top {
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    padding-top: 50px;
+}
+
+.interested-bottom {
+    position: relative;
+    z-index: 1;
 }
 
 .interested-title
@@ -454,7 +465,9 @@ body
 }
 
 .interested-form
-{
+{   
+    
+
     position: absolute;
     z-index: 9;
     top: 100%;
@@ -464,10 +477,17 @@ body
     width: 568px;
     padding: 55px;/* for time*/
 
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-410px);
 
-    background-color: #fff;;
+    background-color: #fff;
+    transition: 1s all;
 }
+
+.interested-form-show {
+    transform: translateX(-50%) translateY(0);
+
+}
+
 .form-row {
     display: flex;
     align-items: center;
